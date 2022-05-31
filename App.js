@@ -3,15 +3,6 @@ import { Text, View, StyleSheet, Dimensions } from 'react-native';
 
 const { height } = Dimensions.get('window');
 
-function App() {
-  const testVar = '';
-  return (
-    <View style={styles.mainContainer}>
-      <Text style={styles.welcomeText}>Welcome to IdealApp!</Text>
-    </View>
-  );
-}
-
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
@@ -24,5 +15,13 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
+
+function App() {
+  return (
+    <View style={styles.mainContainer}>
+      <Text style={styles.welcomeText}>Welcome to IdealApp!</Text>
+    </View>
+  );
+}
 
 export default App;
