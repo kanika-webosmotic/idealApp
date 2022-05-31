@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Text, View, StyleSheet, Dimensions } from 'react-native';
 import ImageViewer from './src/components/ImageViewer';
+import Colors from './src/configs/color';
 
 const { height } = Dimensions.get('window');
 
@@ -9,6 +10,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     padding: 20,
+    backgroundColor: Colors.LIGHTGREY,
   },
   welcomeText: {
     fontSize: 20,
@@ -18,6 +20,16 @@ const styles = StyleSheet.create({
 });
 
 const App = () => {
+  const text = 'hello';
+  const logSomeText = () => {
+    console.log('some text');
+  };
+
+  useEffect(() => {
+    logSomeText();
+    console.log({ text });
+  }, []);
+
   return (
     <View style={styles.mainContainer}>
       <Text style={styles.welcomeText}>Welcome to IdealApp!</Text>
