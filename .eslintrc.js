@@ -10,7 +10,6 @@ module.exports = {
   rules: {
     'import/no-unresolved': 'off',
     'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'error',
     'react/jsx-filename-extension': [
       1,
       {
