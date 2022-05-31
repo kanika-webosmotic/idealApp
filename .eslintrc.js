@@ -7,9 +7,24 @@ module.exports = {
     'eslint-config-prettier',
   ],
   parser: 'babel-eslint',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  env: {
+    'react-native/react-native': true,
+  },
   rules: {
     'import/no-unresolved': 'off',
     'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
+    'react-native/no-unused-styles': 'error',
+    'react-native/split-platform-components': 'error',
+    'react-native/no-inline-styles': 'error',
+    'react-native/no-color-literals': 'error',
+    'react-native/no-raw-text': 'error',
+    'react-native/no-single-element-style-arrays': 'error',
     'react/jsx-filename-extension': [
       1,
       {
@@ -32,5 +47,5 @@ module.exports = {
       },
     ],
   },
-  plugins: ['prettier', 'react-hooks'],
+  plugins: ['prettier', 'react-hooks', 'react', 'react-native'],
 };
