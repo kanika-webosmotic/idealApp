@@ -9,6 +9,8 @@ module.exports = {
   parser: 'babel-eslint',
   rules: {
     'import/no-unresolved': 'off',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
     'react/jsx-filename-extension': [
       1,
       {
@@ -24,12 +26,12 @@ module.exports = {
       },
     ],
     'react/function-component-definition': [
-      2,
+      'error',
       {
         namedComponents: 'arrow-function',
         unnamedComponents: 'arrow-function',
       },
     ],
   },
-  plugins: ['prettier'],
+  plugins: ['prettier', 'react-hooks'],
 };
