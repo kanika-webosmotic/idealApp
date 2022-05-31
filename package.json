@@ -7,17 +7,25 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "precommit": "lint-staged",
+    "prepare": "husky install"
   },
   "dependencies": {
     "react": "17.0.2",
     "react-native": "0.68.2"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
+    "*.{js,jsx}": [
       "prettier --write",
-      "eslint --fix"
+      "eslint --fix",
+      "git add"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run pretest"
+    }
   },
   "devDependencies": {
     "@babel/core": "7.18.2",
